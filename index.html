@@ -5,53 +5,64 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Llar amb suport Sant Andreu · Inici</title>
   <style>
-    body{margin:0;font-family:system-ui,sans-serif;background:#f7f3eb;color:#1b342c}
-    header,main{max-width:960px;margin:auto;padding:20px}
-    header{padding-bottom:0}
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    :root{--green:#173e32;--bg:#f4eee2;--card:#fff;--line:#ddd2bf;--ok:#23735d;--danger:#a43b32;--blue:#315f84;--yellow:#b98d13}
+    body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:#1b342c}
+    header,main{max-width:1080px;margin:auto;padding:20px}
+    header{background:var(--green);color:#fff;border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .btn{padding:10px 14px;border-radius:999px;text-decoration:none;color:#fff;font-weight:700}
-    .green{background:#23735d}.red{background:#a43b32}.blue{background:#315f84}.yellow{background:#b98d13;color:#2d2200}
-    .card{background:#fff;border:1px solid #ddd2bf;border-radius:16px;padding:16px;margin:12px 0}
-    h1,h2{margin:.2rem 0}
-    .muted{color:#5f6d66}
+    .g{background:var(--ok)}.r{background:var(--danger)}.b{background:var(--blue)}.y{background:var(--yellow);color:#2d2200}
+    .grid{display:grid;gap:12px}.kpi{grid-template-columns:repeat(5,minmax(0,1fr))}.cols2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .metric b{font-size:2rem;display:block}
+    ul{margin:.5rem 0 0;padding-left:18px}
+    @media(max-width:900px){.kpi,.cols2{grid-template-columns:1fr 1fr}}@media(max-width:600px){.kpi,.cols2{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
     <h1>Llar amb suport Sant Andreu</h1>
-    <p class="muted">Sistema intern de seguiment i coordinació.</p>
+    <p>Sistema intern de seguiment i coordinació · circuit documental: diari → incidència → reunió → mediació → acords → seguiment.</p>
     <nav class="nav">
-      <a href="diari.html" class="btn green">Diari de seguiment</a>
-      <a href="incidencies.html" class="btn red">Registre d’incidències</a>
-      <a href="reunions.html" class="btn blue">Reunions de coordinació</a>
-      <a href="mediacio.html" class="btn yellow">Mediació</a>
+      <a class="btn g" href="diari.html">Diari de seguiment</a>
+      <a class="btn r" href="incidencies.html">Registre d’incidències</a>
+      <a class="btn b" href="reunions.html">Reunions de coordinació</a>
+      <a class="btn y" href="mediacio.html">Mediació</a>
     </nav>
   </header>
   <main>
     <section class="card">
-      <h2>Recurs</h2>
-      <p>
-        <b>Nom:</b> Llar amb suport Sant Andreu<br>
-        <b>Ubicació:</b> Sant Andreu, Barcelona<br>
-        <b>Tipus:</b> llar amb suport en salut mental<br>
-        <b>Capacitat:</b> 5 places<br>
-        <b>Format:</b> habitatge ordinari integrat en una comunitat veïnal<br>
-        <b>Finalitat:</b> oferir suport socioeducatiu, seguiment quotidià, coordinació amb serveis externs i acompanyament en la convivència.
-      </p>
+      <h2>Resum del recurs</h2>
+      <p>Llar amb suport per a dones adultes amb necessitats de suport socioeducatiu i seguiment en salut mental. Ubicació: Sant Andreu, Barcelona. Capacitat: 5 places. Finalitat: oferir entorn estable, accessible i estructurat amb suport en vida quotidiana, coordinació externa i convivència.</p>
     </section>
-    <section class="card">
-      <h2>Distribució d’habitacions</h2>
-      <ul>
-        <li>Elena: habitació individual, per criteris d’accessibilitat i orientació.</li>
-        <li>Laura i Sara: habitació doble A, amb seguiment específic de convivència.</li>
-        <li>Maria i Núria: habitació doble B, amb ritme tranquil i suport en organització.</li>
-      </ul>
+
+    <section class="grid kpi">
+      <article class="card metric"><small>Entrades de diari</small><b>12</b></article>
+      <article class="card metric"><small>Incidències registrades</small><b>4</b></article>
+      <article class="card metric"><small>Reunions de coordinació</small><b>3</b></article>
+      <article class="card metric"><small>Mediació en seguiment</small><b>1</b></article>
+      <article class="card metric"><small>Residents en seguiment</small><b>5</b></article>
     </section>
-    <section class="card">
-      <h2>Normativa de convivència</h2>
-      <ol>
-        <li>Respectar ritmes personals i moments de calma.</li><li>Respectar espais personals i habitacions.</li><li>Respectar horaris de descans.</li><li>Practicar comunicació respectuosa i assertiva.</li><li>Gestionar conflictes de manera constructiva.</li><li>Mantenir espais comuns nets.</li><li>Complir tasques rotatives.</li><li>Gestionar àpats amb responsabilitat.</li><li>Fer ús responsable d’electrodomèstics.</li><li>Cuidar material compartit.</li><li>Avisar d’incidències, desperfectes o situacions de risc.</li><li>Donar suport mutu sense substituir l’autonomia de ningú.</li><li>Respectar la diversitat.</li><li>Garantir accessibilitat de la informació i dels espais.</li><li>No consumir substàncies ni alcohol dins del pis.</li><li>Promoure convivència responsable, ètica i sostenible.</li>
-      </ol>
+
+    <section class="grid cols2">
+      <article class="card">
+        <h3>Activitat recent</h3>
+        <ul>
+          <li>Seguiment de Sara amb registre de regulació emocional i rutina.</li>
+          <li>Revisió del conflicte Sara–Laura amb activació de MED-01.</li>
+          <li>Ajust d’accessibilitat d’Elena per obstacle a passadís.</li>
+          <li>Reunió de coordinació de casos amb acords i revisió setmanal.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Estat del cas Sara–Laura</h3>
+        <ul>
+          <li>Procés en seguiment ordinari.</li>
+          <li>Acords parcialment complerts.</li>
+          <li>Sense nova escalada greu.</li>
+          <li>Revisió pendent a REU-03.</li>
+        </ul>
+      </article>
     </section>
   </main>
 </body>
